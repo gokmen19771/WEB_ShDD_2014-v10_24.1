@@ -1,0 +1,252 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Featured Content Slider Using jQuery - Web Developer Plus  Demos</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css">
+        #featured .ui-tabs-panel .info {
+            display: none;
+        }
+
+        #featured {
+            width: 400px;
+            padding-right: 250px;
+            position: relative;
+            border: 1px solid #ccc;
+            height: 250px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+            #featured ul.ui-tabs-nav {
+                position: absolute;
+                top: 0;
+                left: 400px;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                width: 570px;
+                height: 250px;
+                overflow: auto;
+                overflow-x: hidden;
+            }
+
+                #featured ul.ui-tabs-nav li {
+                    padding: 1px 0;
+                    padding-left: 13px;
+                    font-size: 12px;
+                    color: #666;
+                }
+
+                    #featured ul.ui-tabs-nav li img {
+                        float: left;
+                        margin: 2px 5px;
+                        background: #fff;
+                        padding: 2px;
+                        border: 1px solid #eee;
+                    }
+
+                    #featured ul.ui-tabs-nav li span {
+                        font-size: 11px;
+                        font-family: Verdana;
+                        line-height: 18px;
+                    }
+
+            #featured li.ui-tabs-nav-item a {
+                display: block;
+                height: 60px;
+                text-decoration: none;
+                color: #333;
+                background: #fff;
+                line-height: 20px;
+                outline: none;
+            }
+
+                #featured li.ui-tabs-nav-item a:hover {
+                    background: #f2f2f2;
+                }
+
+            #featured li.ui-tabs-selected, #featured li.ui-tabs-active {
+                background: url('images/selected-item.gif') top left no-repeat;
+            }
+
+            #featured ul.ui-tabs-nav li.ui-tabs-selected a, #featured ul.ui-tabs-nav li.ui-tabs-active a {
+                background: #ccc;
+            }
+
+            #featured .ui-tabs-panel {
+                width: 400px;
+                height: 250px;
+                background: #999;
+                position: relative;
+            }
+
+                #featured .ui-tabs-panel .info {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 70px;
+                    background: url('images/transparent-bg.png');
+                }
+
+                    #featured .ui-tabs-panel .info a.hideshow {
+                        position: absolute;
+                        font-size: 11px;
+                        font-family: Verdana;
+                        color: #f0f0f0;
+                        right: 10px;
+                        top: -20px;
+                        line-height: 20px;
+                        margin: 0;
+                        outline: none;
+                        background: #333;
+                    }
+
+            #featured .info h2 {
+                font-size: 1.2em;
+                font-family: Georgia, serif;
+                color: #fff;
+                padding: 5px;
+                margin: 0;
+                font-weight: normal;
+                overflow: hidden;
+            }
+
+            #featured .info p {
+                margin: 0 5px;
+                font-family: Verdana;
+                font-size: 11px;
+                line-height: 15px;
+                color: #f0f0f0;
+            }
+
+            #featured .info a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+                #featured .info a:hover {
+                    text-decoration: underline;
+                }
+
+            #featured .ui-tabs-hide {
+                display: none;
+            }
+    </style>
+
+    <script type="text/javascript" src="Scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.7.2.custom.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#featured").tabs({
+                fx: [{ opacity: "toggle", duration: 'slow' }, { opacity: "toggle", duration: 'normal' }],
+                show: function (event, ui) {
+                    $('#featured .ui-tabs-panel .info').hide();
+                    var infoheight = $('.info', ui.panel).height();
+                    $('.info', ui.panel).css('height', '0px').animate({ 'height': infoheight }, 500);
+                }
+            }).tabs("rotate", 5000, true);
+            $('#featured').hover(
+                function () { $('#featured').tabs('rotate', 0, true); },
+                function () { $('#featured').tabs('rotate', 5000, true); }
+            );
+            $('#featured .ui-tabs-panel a.hideshow').click(function () {
+                if ($(this).text() == 'Gizle') {
+                    $(this).parent('.info').animate({ 'height': '0px' }, 500);
+                    $(this).text('Göster');
+                }
+                else {
+                    $(this).parent('.info').animate({ 'height': '70px' }, 500);
+                    $(this).text('Gizle');
+                }
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+
+
+    <div id="featured">
+        <ul class="ui-tabs-nav">
+
+            <li class="ui-tabs-nav-item" id="nav-fragment-1">
+                <a href="#fragment-1">
+                    <img src="haberler/thumb/histerektomi_ufak.jpg" alt="" />
+                    <span>25.08.2014<br />Histerektomi <br /> Pilot Uygulaması</span>
+                </a>
+            </li>
+
+            <li class="ui-tabs-nav-item" id="nav-fragment-1">
+                <a href="#fragment-2">
+                    <img src="haberler/thumb/kurumsal_ufak.jpg" alt="" />
+                    <span>10.04.2014<br />Kurumsal Karne <br /> Pilot Uygulaması</span>
+                </a>
+            </li>
+
+            <li class="ui-tabs-nav-item" id="nav-fragment-2">
+                <a href="#fragment-3">
+                    <img src="images/lomber_small.jpg" alt="" />
+                    <span>12.03.2014<br />Lomber Disk Hernisi<br />Denetim Toplantısı </span>
+                </a>
+            </li>
+
+            <li class="ui-tabs-nav-item" id="nav-fragment-3">
+                <a href="#fragment-4">
+                    <img src="images/radyolojikongre_small.jpg" alt="" />
+                    <span>15.11.2013<br />34. Ulusal Radyoloji <br /> Kongresi</span>
+                </a>
+            </li>
+
+          
+
+
+        </ul>
+
+        <div id="fragment-1" class="ui-tabs-panel ui-tabs-panel ui-tabs-hide" style="">
+            <img src="Haberler/Foto/histerektomi.jpg" alt="" style="background-repeat: no-repeat;background-attachment: fixed; width: 400px; height: 250px;" />
+            <div class="info">
+                <a class="hideshow" href="#">Gizle</a>
+                <h2><a href="/Haberler/Histerektomi.aspx" target="_blank">Histerektomi pilot uygulama toplantisi yapildi.</a></h2>
+            </div>
+        </div>
+
+        <div id="fragment-2" class="ui-tabs-panel ui-tabs-panel ui-tabs-hide" style="">
+            <img src="Haberler/Foto/20140410_144547.jpg" alt="" style="background-repeat: no-repeat;background-attachment: fixed; width: 400px; height: 250px;" />
+            <div class="info">
+                <a class="hideshow" href="#">Gizle</a>
+                <h2><a href="/Haberler/KurumsalKarne.aspx" target="_blank">Kurumsal Karne Pilot Çalışması Ankara İl Sağlık Müdürlüğünde Başlatıldı.</a></h2>
+            </div>
+        </div>
+
+        <div id="fragment-3" class="ui-tabs-panel ui-tabs-panel ui-tabs-hide" style="">
+            <img src="images/lomber.jpg" alt="" style="background-repeat: no-repeat; background-attachment: fixed; width: 400px; height: 250px;" />
+            <div class="info">
+                <a class="hideshow" href="#">Gizle</a>
+                <h2><a href="/Haberler/Belfitigi.aspx" target="_blank">Lomber Disk Hernisi (Belfıtığı) Operasyonlarının Endikasyona Uygunluk Denetimi Toplantısı Gerçekleştirildi </a></h2>
+            </div>
+        </div>
+
+        <div id="fragment-4" class="ui-tabs-panel ui-tabs-panel ui-tabs-hide" style="">
+            <img src="images/radyolojikongre.jpg" alt="" style="background-repeat: no-repeat; background-attachment: fixed; width: 400px; height: 250px;" />
+            <div class="info">
+                <a class="hideshow" href="#">Gizle</a>
+                <h2><a href="/Haberler/UlusalRadyoloji.aspx" target="_blank">MR,BT,Mamografi Denetim Raporlarımız 34.Ulusal Radyoloji Kongresi'nde </a></h2>
+            </div>
+        </div>
+
+
+    
+
+
+        <!-- Third Content -->
+
+
+
+    </div>
+
+
+</body>
+</html>

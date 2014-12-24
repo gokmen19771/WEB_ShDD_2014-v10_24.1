@@ -1,0 +1,334 @@
+﻿
+
+
+
+html, body {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:12px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("imgMaster/bg-body.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #E7E7E7;
+}
+
+.floatLetf {
+float:left;
+}
+
+.displayinline
+{
+    display: inline;
+}
+
+.clearFix {
+    clear:both;
+}
+
+
+#container {
+    margin: auto;
+    position: relative;
+    width: 985px;
+    min-height: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+#header {
+    background-image: url("imgMaster/PageHeader.png");
+    background-repeat: no-repeat;
+    padding: 0px;
+    height: 133px;
+}
+
+#master_content {
+    padding-bottom: 110px; /* Height of the footer 10 px padding eklendi */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    height:100%;
+
+}
+
+#footer {
+   
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Height of the footer */
+    background-image: url("imgMaster/FooterImg.png");
+    background-repeat: no-repeat;
+    float:left;
+}
+
+#footer-content {
+
+}
+
+#footer-content ul {
+    width:100%;
+    height:100%;
+    margin:10px;
+}
+
+ #footer-content li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
+
+.ana-sutun {
+    width: 670px;
+    float: left;
+}
+
+.full-Sutun {
+    width:985px;
+}
+
+.sag-sutun {
+    margin: 0px 0px 0px 10px;
+    float: right;
+    width: 280px;
+
+  
+}
+
+.kutu {
+    border: thin solid #00CCFF;box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  
+ 
+}
+
+
+
+.kutu-header {
+    background-image: url('imageSprite/sprite-header.png');
+    background-position: -410px 100%;
+    height: 35px;
+    padding: 6px 10px 6px 10px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.kutu-header-mavi {
+    background-image: url('imageSprite/sprite-header-mavi.png');
+    background-position: -410px 100%;
+    height: 35px;
+    padding: 6px 10px 6px 10px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+ 
+}
+
+.kutu-header-uzun {
+    background-image: url('imageSprite/sprite-header.png');
+    background-position: -1900px 100%;
+    height: 35px;
+    padding: 6px 10px 6px 10px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+  
+}
+
+.kutu-header-uzun-mavi {
+    background-image: url('imageSprite/sprite-header-mavi.png');
+    background-position: -1900px 100%;
+    height: 35px;
+    padding: 6px 10px 6px 10px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    
+
+}
+
+.kutu-content {
+    padding:10px;
+}
+
+.kutu-content a{
+    
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration:none;
+}
+
+.kutu-content a:hover{
+ 
+    text-decoration:underline;
+}
+
+.kutu-content a:hover{
+ 
+    text-decoration:underline;
+}
+
+.kutu-content div{
+    padding: 3px;
+  
+}
+
+
+.iframe1 {
+    width: 99%;
+    height: 300px;
+    border: thin solid #00CCFF;
+   
+}
+
+
+
+#navListDiv {
+    position: relative;
+    top: 100px;
+    right:0px;
+    height: 1em;
+    float:right;
+    margin-right:10px;
+
+}
+
+    #navListDiv ul {
+        margin:0px;
+    }
+
+    #navListDiv li {
+        display: inline;
+        list-style-type: none;
+        margin-right: 5px;
+        color: #FFFFFF;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+        #navListDiv li a {
+            color: #FFFFFF;
+            font-size: small;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+            #navListDiv li a:hover {
+                background-color: #6699FF;
+                padding-bottom:5px;
+            }
+
+#uygulamaListe {
+    margin-left:0px;
+    border: thin dashed #FF66CC;
+    list-style-type: none;
+    padding:10px;
+    list-style-position:inside;
+}
+
+
+#uygulamaListe li {
+    border-color: #CCCCCC;
+    border-style: none none solid none;
+    border-width: thin;
+    padding-bottom:5px;
+    padding-top:5px;
+
+}
+#uygulamaListe li {
+    border-color: #CCCCCC;
+    border-style: none none solid none;
+    border-width: thin;
+    padding-bottom:5px;
+    padding-top:5px;
+
+}
+
+#uygulamaListe li a {
+    color: #0033CC;
+    font-size: small;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#uygulamaListe li a:hover {
+    text-decoration:underline;
+
+}
+
+.sorularPanel {
+    padding: 10px;
+    border: thin dotted #CC0099;
+    position: relative;
+    width: 100%;
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.soruPanel {
+    padding: 10px;
+    border: thin solid #CCCCCC;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    margin-bottom: 5px;
+    position:relative;
+     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+   
+
+    .soruPanel:hover  {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-left-style: solid;
+    border-left-color: #CC0066;
+    border-left-width: thin;
+}
+
+.soruLabel {
+    margin-bottom: 4px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.soruFields {
+    width:200px;
+}
+
+.ulDuyuru {
+    margin: 5px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.ulDuyuru li {
+    background: url('images/duyuru.jpg') no-repeat 0px 0px transparent;
+    margin: 0;
+    padding: 0px 0px 1px 45px;
+    vertical-align: middle;
+}
+
+.kurumsalPanel {
+    
+    padding: 10px;
+   
+}
+
+.dxGridColumnHeader {
+    
+}

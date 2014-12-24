@@ -1,0 +1,40 @@
+LoadOperation<vwTUMVERILER> tipini belitmezsen xtrapivot çalýþmýyor
+vwTUMVERILER belirtilecek
+
+
+http://www.devexpress.com/Support/Center/Example/List/1
+
+
+
+LOCALÝZASYON
+http://msdn.microsoft.com/en-us/library/dd941932%28v=vs.95%29.aspx   SÝLVERLÝGHT ÝÇÝN
+wpf resource file dosyalarýný 
+C:\Program Files (x86)\DXperience 12.1\Bin\Silverlight\tr-TR   altýna kopyala
+debug da yukardaki iþlemi yap
+
+  //var v = (String)GetGlobalResourceObject("DevExpress_Web_ASPxGridView_v12_1", "ASPxGridViewStringId.GroupPanel");
+            //string welcome = Resources.Resource1.ad;
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT        dbo.FORM_YATAYDATA.FormAdi, dbo.Kullanicilar.KullaniciAdSoyad, dbo.KURUM_LISTESI.Kurum AS DenetleyeceðiKurum, 
+                         dbo.FORM_YATAYDATA.IlKod AS DenetlediðiÝl, dbo.Kullanicilar.Adres, dbo.Kullanicilar.Tel, KURUM_LISTESI_1.Kurum AS KendiKurumu, 
+                         COUNT(dbo.FORM_YATAYDATA.DenekAd) AS HastaSayýsý, dbo.Kullanicilar.Unvan, dbo.Kullanicilar.Brans, dbo.Kullanicilar.IlgiAlani, dbo.Kullanicilar.IlKod, 
+                         dbo.Kullanicilar.KurumKod
+FROM            dbo.FORM_YATAYDATA INNER JOIN
+                         dbo.Kullanicilar ON dbo.FORM_YATAYDATA.AnketorId = dbo.Kullanicilar.KullaniciID INNER JOIN
+                         dbo.KURUM_LISTESI ON dbo.FORM_YATAYDATA.KurumKod = dbo.KURUM_LISTESI.KurumKod LEFT OUTER JOIN
+                         dbo.KURUM_LISTESI AS KURUM_LISTESI_1 ON dbo.Kullanicilar.KurumKod = KURUM_LISTESI_1.KurumKod
+GROUP BY dbo.FORM_YATAYDATA.FormAdi, dbo.Kullanicilar.KullaniciAdSoyad, dbo.Kullanicilar.Adres, dbo.Kullanicilar.Tel, dbo.KURUM_LISTESI.Kurum, 
+                         KURUM_LISTESI_1.Kurum, dbo.FORM_YATAYDATA.IlKod, dbo.Kullanicilar.Unvan, dbo.Kullanicilar.Brans, dbo.Kullanicilar.IlgiAlani, dbo.Kullanicilar.IlKod, 
+                         dbo.Kullanicilar.KurumKod

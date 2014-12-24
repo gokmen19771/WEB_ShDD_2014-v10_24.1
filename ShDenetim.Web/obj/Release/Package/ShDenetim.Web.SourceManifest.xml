@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\gokmen.yilmaz\Desktop\WEB_ShDD 2014 v10_23.9\ShDenetim.Web\obj\Release\Package\PackageTmp" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Users\gokmen.yilmaz\Desktop\WEB_ShDD 2014 v10_23.9\ShDenetim.Web\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\gokmen.yilmaz\Desktop\WEB_ShDD 2014 v10_23.9\ShDenetim.Web\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

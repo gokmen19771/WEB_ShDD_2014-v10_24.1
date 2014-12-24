@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="App.Master.cs" Inherits="ShDenetim.Web.AnketUygulama.Anket" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <script src="Scripts/bootstrap.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+     <script type="text/javascript">
+         (function (i, s, o, g, r, a, m) {
+             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                 (i[r].q = i[r].q || []).push(arguments)
+             }, i[r].l = 1 * new Date(); a = s.createElement(o),
+             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+         ga('create', 'UA-47467942-2', 'saglik.gov.tr');
+         ga('send', 'pageview');
+
+</script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ 
+
+<div id="container">
+	<div id="header" style="position:relative">
+		
+
+          <div style="position:absolute; top:95px; height:1em; left: 0px;width:185px">
+           <a href="http://www.saglik.gov.tr" style="margin-left: 20px; font-family: Arial, Helvetica, sans-serif; font-size: small; color: #0099FF; ">T.C. Sağlık Bakanlığı</a>
+         </div>  
+     
+         <div style="margin: auto;position: absolute; right: 10px; bottom: 5px; width: 205px; height: 28px;">
+             <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Arial" Font-Size="11pt" ForeColor="White" Text="Label"></asp:Label>
+          </div>
+	      
+     
+         
+	</div>
+    <div style="clear:both">
+    </div>
+
+	<div id="master_content">
+		<!-- Body start -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+		<!-- Body end -->
+	</div>
+    <div style="clear:both"></div>
+	<div id="footer">
+		 <div id="footer-content">
+      </div>
+	</div>
+</div>
+
+  
+</body>
+</html>

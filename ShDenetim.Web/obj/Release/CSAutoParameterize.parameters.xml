@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DenetimDbContext-Web.config Connection String" description="DenetimDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=.;Initial Catalog=DenetimDb;Integrated Security=True;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\gokmen\.yilmaz\\Desktop\\WEB_ShDD\ 2014\ v10_23\.9\\ShDenetim\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DenetimDbContext']/@connectionString" />
+  </parameter>
+</parameters>

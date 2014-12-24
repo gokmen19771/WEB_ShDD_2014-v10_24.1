@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70647AA0-128F-48C0-9377-8C2AA152F73A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShDenetim.Web</RootNamespace>
+    <AssemblyName>ShDenetim.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PrecompileBeforePublish>true</PrecompileBeforePublish>
+    <PublishDatabases>false</PublishDatabases>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1.Web, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ServiceModel.DomainServices.EntityFramework">
+      <HintPath>..\packages\WCFRIA.EntityFramework.5.0.0.1\lib\Microsoft.ServiceModel.DomainServices.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel.DomainServices.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Giris.aspx" />
+    <Content Include="Account\ParolaDegistir.aspx" />
+    <Content Include="Account\ParolaIstem.aspx" />
+    <Content Include="Account\Yonet.aspx" />
+    <Content Include="AnketUygulama\AnketForm.aspx" />
+    <Content Include="AnketUygulama\FormTanimla.aspx" />
+    <Content Include="AnketUygulama\HastaBilgi.aspx" />
+    <Content Include="AnketUygulama\Icd10.ascx" />
+    <Content Include="AnketUygulama\KurumListesi.aspx" />
+    <Content Include="AnketUygulama\loading.gif" />
+    <Content Include="AnketUygulama\MainPage.aspx" />
+    <Content Include="AnketUygulama\Pivot.aspx" />
+    <Content Include="AnketUygulama\Rapor.aspx" />
+    <Content Include="AnketUygulama\SecimDurum.aspx" />
+    <Content Include="App_Themes\Mavi\demo-slideshow.css" />
+    <Content Include="App_Themes\Mavi\imageSprite\sprite-header-mavi.png" />
+    <Content Include="App_Themes\Mavi\imageSprite\sprite-header.png" />
+    <Content Include="App_Themes\Mavi\images\a1.png" />
+    <Content Include="App_Themes\Mavi\images\acikmavi.gif" />
+    <Content Include="App_Themes\Mavi\images\BaskiOnIzleme48x48.png" />
+    <Content Include="App_Themes\Mavi\images\bg.jpg" />
+    <Content Include="App_Themes\Mavi\images\BigSoft.Business.Resources.Search.png" />
+    <Content Include="App_Themes\Mavi\images\blue.jpg" />
+    <Content Include="App_Themes\Mavi\images\btn_delete.gif" />
+    <Content Include="App_Themes\Mavi\images\btn_edit.gif" />
+    <Content Include="App_Themes\Mavi\images\duyuru.jpg" />
+    <Content Include="App_Themes\Mavi\images\ekle.png" />
+    <Content Include="App_Themes\Mavi\images\gvHeaderBg.gif" />
+    <Content Include="App_Themes\Mavi\images\gv_CevFalse.png" />
+    <Content Include="App_Themes\Mavi\images\gv_CevTrue.png" />
+    <Content Include="App_Themes\Mavi\images\gv_IncFalse.png" />
+    <Content Include="App_Themes\Mavi\images\gv_IncTrue.png" />
+    <Content Include="App_Themes\Mavi\images\Hata48x48.png" />
+    <Content Include="App_Themes\Mavi\images\hg.png" />
+    <Content Include="App_Themes\Mavi\images\excel.png" />
+    <Content Include="App_Themes\Mavi\images\Info.png" />
+    <Content Include="App_Themes\Mavi\images\InfoUfak.png" />
+    <Content Include="App_Themes\Mavi\images\InfoUfakKirmizi.png" />
+    <Content Include="App_Themes\Mavi\images\iptal.png" />
+    <Content Include="App_Themes\Mavi\images\Mainbg.gif" />
+    <Content Include="App_Themes\Mavi\images\Onay48x48.png" />
+    <Content Include="App_Themes\Mavi\images\pdf.gif" />
+    <Content Include="App_Themes\Mavi\images\yesil.gif" />
+    <Content Include="App_Themes\Mavi\imgMaster\baslik_ust.png" />
+    <Content Include="App_Themes\Mavi\imgMaster\bg-body.jpg" />
+    <Content Include="App_Themes\Mavi\imgMaster\FooterImg.png" />
+    <Content Include="App_Themes\Mavi\imgMaster\PageHeader.png" />
+    <Content Include="App_Themes\Mavi\SbTema.css" />
+    <Content Include="Bottom1.htm" />
+    <Content Include="ClientBin\ShDenetim.SL.xap" />
+    <Content Include="AppDenetim.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Haberler\Foto\20140410_144547.jpg" />
+    <Content Include="Haberler\Foto\20140410_144555.jpg" />
+    <Content Include="Haberler\Foto\20140410_144617.jpg" />
+    <Content Include="Haberler\Foto\20140410_144703.jpg" />
+    <Content Include="Haberler\Belfitigi.aspx" />
+    <Content Include="Haberler\Biyoistatistik.aspx" />
+    <Content Include="Haberler\BtMrMamografiHaber.aspx" />
+    <Content Include="Haberler\Foto\histerektomi.jpg" />
+    <Content Include="Haberler\Histerektomi.aspx" />
+    <Content Include="Haberler\KatarakHaber.aspx" />
+    <Content Include="Haberler\KurumsalKarne.aspx" />
+    <Content Include="Haberler\Thumb\histerektomi_ufak.jpg" />
+    <Content Include="Haberler\Thumb\kurumsal_ufak.jpg" />
+    <Content Include="Haberler\UlusalRadyoloji.aspx" />
+    <Content Include="Haberler\KataraktToplanti.aspx" />
+    <Content Include="Haberler\MuhakkikDuyuru.aspx" />
+    <Content Include="Haberler\EriskinHaber.aspx" />
+    <Content Include="Haberler\RadyolojiDuyuru.aspx" />
+    <Content Include="hideshow.html" />
+    <Content Include="iletisim.aspx" />
+    <Content Include="images\bioistresim\res1.jpg" />
+    <Content Include="images\bioistresim\res2.jpg" />
+    <Content Include="images\bioistresim\res3.jpg" />
+    <Content Include="images\bioistresim\res4.jpg" />
+    <Content Include="images\Copy of Medimagazin.png" />
+    <Content Include="images\lomber.jpg" />
+    <Content Include="images\lomber_buyuk.jpg" />
+    <Content Include="images\lomber_small.jpg" />
+    <Content Include="images\MedimagazinSmall.png" />
+    <Content Include="images\katarakttoplanti_small.jpg" />
+    <Content Include="images\image1 - small.jpg" />
+    <Content Include="images\katarakt_toplanti.jpg" />
+    <Content Include="images\Medimagazin.png" />
+    <Content Include="images\RadResim\2.jpg" />
+    <Content Include="images\RadResim\3.jpg" />
+    <Content Include="images\RadResim\4.jpg" />
+    <Content Include="images\RadResim\5.jpg" />
+    <Content Include="images\RadResim\r1.png" />
+    <Content Include="images\radyolojikongre_small.jpg" />
+    <Content Include="images\radyolojikongre.jpg" />
+    <Content Include="images\TeskilatS.PNG" />
+    <Content Include="images\Uygulama\Denetim.png" />
+    <Content Include="images\Uygulama\DenetimYBU.png" />
+    <Content Include="images\Uygulama\dizeklem.png" />
+    <Content Include="images\Uygulama\goz.png" />
+    <Content Include="images\Uygulama\histerektomi.png" />
+    <Content Include="images\Uygulama\izleme.png" />
+    <Content Include="images\Uygulama\kalcaeklem.png" />
+    <Content Include="images\Uygulama\Kardio.png" />
+    <Content Include="images\Uygulama\lomber.png" />
+    <Content Include="images\Uygulama\Radyoloji.png" />
+    <Content Include="images\Uygulama\safra.png" />
+    <Content Include="images\Yayinlarimiz\p1.jpg" />
+    <Content Include="images\Yayinlarimiz\p2.jpg" />
+    <Content Include="images\Yayinlarimiz\p3.jpg" />
+    <Content Include="images\Yayinlarimiz\p4.jpg" />
+    <Content Include="images\Yayinlarimiz\p5.jpg" />
+    <Content Include="images\Yayinlarimiz\p6.jpg" />
+    <Content Include="Kurumsal\KurumsalBilgi.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="App_Themes\Mavi\images\baslik.png" />
+    <Content Include="Global.asax" />
+    <Content Include="images\BaskanResim.jpg" />
+    <Content Include="images\image1-small.jpg" />
+    <Content Include="images\image1.jpg" />
+    <Content Include="images\image2-small.jpg" />
+    <Content Include="images\image2.jpg" />
+    <Content Include="images\image3-small.jpg" />
+    <Content Include="images\image3.jpg" />
+    <Content Include="images\image4-small.jpg" />
+    <Content Include="images\image4.jpg" />
+    <Content Include="images\image5-small.jpg" />
+    <Content Include="images\image5.jpg" />
+    <Content Include="images\selected-item.gif" />
+    <Content Include="images\transparent-bg.gif" />
+    <Content Include="images\transparent-bg.png" />
+    <Content Include="Kurumsal\AnaSurecSorumlulari.ascx" />
+    <Content Include="Kurumsal\Baskan.ascx" />
+    <Content Include="Kurumsal\DaireninGorevleri.ascx" />
+    <Content Include="Mevzuat.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Docs\RADYOLOJİ GENELGE 2014-19.pdf" />
+    <Content Include="Docs\EklerLomber\belfitigi_ameliyatlari_listesi.xls" />
+    <Content Include="Docs\EklerLomber\belfitigi_resmiyazi.pdf" />
+    <Content Include="Docs\EklerLomber\Genel Cerrah_BeyinVeSinirCerrahi.xls" />
+    <Content Include="Docs\EklerSafra\Genel Cerrah_BeyinVeSinirCerrahi.xls" />
+    <Content Include="Docs\EklerSafra\safrakesesi_resmiyazi.pdf" />
+    <Content Include="Docs\EklerSafra\safrakesesi_ameliyatlari_listesi.xls" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.7.2.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery-ui-1.9.0.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-tabs-rotate.js" />
+    <Content Include="Scripts\jquery.cycle2.caption2.js" />
+    <Content Include="Scripts\jquery.cycle2.js" />
+    <Content Include="Scripts\jquery.elevateZoom-3.0.8.min.js" />
+    <Content Include="Scripts\jquery.elevatezoom.js" />
+    <Content Include="Scripts\validations.js" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebUserControl1.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Giris.aspx.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Giris.aspx.designer.cs">
+      <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ParolaDegistir.aspx.cs">
+      <DependentUpon>ParolaDegistir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ParolaDegistir.aspx.designer.cs">
+      <DependentUpon>ParolaDegistir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ParolaIstem.aspx.cs">
+      <DependentUpon>ParolaIstem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ParolaIstem.aspx.designer.cs">
+      <DependentUpon>ParolaIstem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UyelikPersonelBilgi.cs" />
+    <Compile Include="Account\Yonet.aspx.cs">
+      <DependentUpon>Yonet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Yonet.aspx.designer.cs">
+      <DependentUpon>Yonet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\FormTanimla.aspx.cs">
+      <DependentUpon>FormTanimla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\FormTanimla.aspx.designer.cs">
+      <DependentUpon>FormTanimla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\HastaBilgi.aspx.cs">
+      <DependentUpon>HastaBilgi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\HastaBilgi.aspx.designer.cs">
+      <DependentUpon>HastaBilgi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\KurumListesi.aspx.cs">
+      <DependentUpon>KurumListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\KurumListesi.aspx.designer.cs">
+      <DependentUpon>KurumListesi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\Pivot.aspx.cs">
+      <DependentUpon>Pivot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\Pivot.aspx.designer.cs">
+      <DependentUpon>Pivot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\Rapor.aspx.cs">
+      <DependentUpon>Rapor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\Rapor.aspx.designer.cs">
+      <DependentUpon>Rapor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\SecimDurum.aspx.cs">
+      <DependentUpon>SecimDurum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\SecimDurum.aspx.designer.cs">
+      <DependentUpon>SecimDurum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App.Master.cs">
+      <DependentUpon>App.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Master.designer.cs">
+      <DependentUpon>App.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\AnketForm.aspx.cs">
+      <DependentUpon>AnketForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\AnketForm.aspx.designer.cs">
+      <DependentUpon>AnketForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\Icd10.ascx.cs">
+      <DependentUpon>Icd10.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\Icd10.ascx.designer.cs">
+      <DependentUpon>Icd10.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AnketUygulama\MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnketUygulama\MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\Class1.cs" />
+    <Compile Include="App_Code\Dynamic.cs" />
+    <Compile Include="Haberler\Biyoistatistik.aspx.cs">
+      <DependentUpon>Biyoistatistik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Haberler\Biyoistatistik.aspx.designer.cs">
+      <DependentUpon>Biyoistatistik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Haberler\BtMrMamografiHaber.aspx.cs">
+      <DependentUpon>BtMrMamografiHaber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Haberler\BtMrMamografiHaber.aspx.designer.cs">
+      <DependentUpon>BtMrMamografiHaber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Haberler\MuhakkikDuyuru.aspx.cs">
+      <DependentUpon>MuhakkikDuyuru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Haberler\MuhakkikDuyuru.aspx.designer.cs">
+      <DependentUpon>MuhakkikDuyuru.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Haberler\EriskinHaber.aspx.cs">
+      <DependentUpon>EriskinHaber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Haberler\EriskinHaber.aspx.designer.cs">
+      <DependentUpon>EriskinHaber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Haberler\RadyolojiDuyuru.aspx.cs">
+      <DependentUpon>RadyolojiDuyuru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Haberler\RadyolojiDuyuru.aspx.designer.cs">
+      <DependentUpon>RadyolojiDuyuru.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kurumsal\KurumsalBilgi.aspx.cs">
+      <DependentUpon>KurumsalBilgi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kurumsal\KurumsalBilgi.aspx.designer.cs">
+      <DependentUpon>KurumsalBilgi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Kurumsal\AnaSurecSorumlulari.ascx.cs">
+      <DependentUpon>AnaSurecSorumlulari.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kurumsal\AnaSurecSorumlulari.ascx.designer.cs">
+      <DependentUpon>AnaSurecSorumlulari.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kurumsal\Baskan.ascx.cs">
+      <DependentUpon>Baskan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kurumsal\Baskan.ascx.designer.cs">
+      <DependentUpon>Baskan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Kurumsal\DaireninGorevleri.ascx.cs">
+      <DependentUpon>DaireninGorevleri.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kurumsal\DaireninGorevleri.ascx.designer.cs">
+      <DependentUpon>DaireninGorevleri.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mevzuat.aspx.cs">
+      <DependentUpon>Mevzuat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mevzuat.aspx.designer.cs">
+      <DependentUpon>Mevzuat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DENETİM_KURUM_DURUM.cs" />
+    <Compile Include="Models\ICD10.cs" />
+    <Compile Include="Models\FORMSORU_GRUP.cs" />
+    <Compile Include="Models\KURUMDTO.cs" />
+    <Compile Include="Models\KURUMLAR_FULL.cs" />
+    <Compile Include="Models\KURUMTIPKODLARI.cs" />
+    <Compile Include="Models\KURUM_LISTESI.cs" />
+    <Compile Include="Models\vwDenetleyiciAtamaBilgi.cs" />
+    <Compile Include="Models\V_TSIM_HBF_YBU.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Genel.cs" />
+    <Compile Include="Utils\NesneIslemleri.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DenetimDbContext.cs" />
+    <Compile Include="Models\FORM_SORU.cs" />
+    <Compile Include="Models\FORM_TANIM.cs" />
+    <Compile Include="Models\FORM_YATAYDATA.cs" />
+    <Compile Include="Models\ILPLAKA.cs" />
+    <Compile Include="Models\Kullanicilar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\MailGonder.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Account\Web.config" />
+    <Content Include="App.Master" />
+    <Content Include="Docs\2011-59-genelge.docx" />
+    <Content Include="Docs\2012-41-genelge.pdf" />
+    <Content Include="Docs\agiz_dis_yonetmelik.docx" />
+    <Content Include="Docs\AyaktaTeshisTedavi.doc" />
+    <Content Include="Docs\AyaktaTeshisTedaviEk.doc" />
+    <Content Include="Docs\OzelHastYon.doc" />
+    <Content Include="Docs\OzelHastYonEk.doc" />
+    <Content Include="Docs\yazi.pdf" />
+    <Content Include="Docs\yazi1.pdf" />
+    <Content Include="Docs\DenetimUz.pdf" />
+    <Content Include="Docs\denetimkoroner.pdf" />
+    <Content Include="Docs\muhakkiklik-egitimi-tarih-ve-kontenjanlari.pdf" />
+    <Content Include="Haberler\muhakkiklik-egitimi-tarih-ve-kontenjanlari.pdf" />
+    <Content Include="Docs\GörmeKeskinliğiİzlemeFormu.xls" />
+    <None Include="Properties\PublishProfiles\SbDenetimPublish.pubxml" />
+    <Content Include="Site1.Master" />
+    <Content Include="Scripts\elevatezoom.jquery.json" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\DevExpress_Web_ASPxEditors_v12_1.resx" />
+    <Content Include="App_GlobalResources\DevExpress_Web_ASPxGridView_v12_1.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\DevExpress_Web_ASPxHtmlEditor_v12_1.resx" />
+    <Content Include="App_GlobalResources\DevExpress_Web_ASPxPivotGrid_v12_1.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\DevExpress_Web_ASPxScheduler_v12_1.resx" />
+    <Content Include="App_GlobalResources\DevExpress_Web_ASPxSpellChecker_v12_1.resx" />
+    <Content Include="App_GlobalResources\DevExpress_Web_ASPxTreeList_v12_1.resx" />
+    <Content Include="App_GlobalResources\DevExpress_Web_v12_1.resx" />
+    <Content Include="App_GlobalResources\DevExpress_XtraReports_v12_1_Web.resx" />
+    <Content Include="App_GlobalResources\DevExpress_XtraScheduler_v12_1_Core.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AnketUygulama\UploadFiles\" />
+    <Folder Include="App_LocalResources\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6812</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4806/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
